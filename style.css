@@ -1,4 +1,307 @@
-.container {
+
+
+/*全体設定 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #333;
+}
+
+
+/* ヘッダー */
+
+.Header {
+  width: 100%;
+  height: 56px;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.HeaderContainer {
+  height: 100%;
+  padding: 0 28px;
+
   display: flex;
-  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ロゴ */
+.HeaderLogo {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderLogo img {
+  display: block;
+  width: 130px;
+}
+
+/* ナビゲーション */
+.HeaderNav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* メニュー */
+.HeaderMenu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* メニューの文字 */
+.HeaderMenu li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 英語 */
+.HeaderMenu li a span:first-child {
+  font-size: 10px;
+}
+
+/* 日本語 */
+.HeaderMenu li a span:last-child {
+  font-size: 8px;
+  margin-top: 2px;
+}
+
+/* ヘッダーのボタン */
+.HeaderButton {
+  width: 115px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f79314;
+  border-radius: 30px;
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+
+/* ファーストビュー全体 */
+
+.FirstView {
+  position: relative;
+  width: 100%;
+  height: 612px;
+
+  overflow: hidden;
+  background-color: #fff;
+}
+
+
+/* 背景の装飾 */
+
+/* 左上の三角形 */
+.FirstViewTriangleLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 230px;
+  z-index: 0;
+}
+
+/* 右下の三角形 */
+.FirstViewTriangleRight {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 290px;
+  z-index: 0;
+}
+
+/* 左側の曲線 */
+.FirstViewDecoration {
+  position: absolute;
+  left: -100px;
+  top: 70px;
+
+  width: 500px;
+  z-index: 0;
+}
+
+
+/*キャッチコピー */
+
+.FirstViewContent {
+  position: absolute;
+  top: 185px;
+  left: 13.8%;
+
+  z-index: 2;
+}
+
+/* 見出し */
+.FirstViewTitle {
+  margin: 0;
+
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* カウンセリングボタン */
+.CounselingButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 413px;
+  height: 56px;
+
+  margin-top: 14px;
+
+  background-color: #f79314;
+  border-radius: 30px;
+
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ボタンにマウスを乗せたとき */
+.CounselingButton:hover {
+  opacity: 0.8;
+}
+
+/* 注意書き */
+.FirstViewNote {
+  margin-top: 13px;
+
+  font-size: 9px;
+  line-height: 1.5;
+  color: #555;
+}
+
+
+/* メイン画像 */
+
+.FirstViewMainImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 51.5%;
+  height: auto;
+
+  z-index: 1;
+}
+
+
+/* No.1バッジ */
+
+.FirstViewBadge {
+  position: absolute;
+  top: 95px;
+  left: 43.7%;
+
+  width: 168px;
+  height: auto;
+
+  z-index: 3;
+}
+
+
+/* レスポンシブ対応 */
+
+@media screen and (max-width: 767px) {
+
+  .Header {
+    height: 60px;
+  }
+
+  .HeaderContainer {
+    padding: 0 15px;
+  }
+
+  .HeaderLogo img {
+    width: 125px;
+  }
+
+  .HeaderNav {
+    display: none;
+  }
+
+  .FirstView {
+    height: auto;
+    min-height: 650px;
+  }
+
+  .FirstViewContent {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    padding: 60px 20px 0;
+  }
+
+  .FirstViewTitle {
+    font-size: 25px;
+  }
+
+  .CounselingButton {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .FirstViewNote {
+    font-size: 8px;
+  }
+
+  .FirstViewMainImage {
+    position: relative;
+    display: block;
+
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .FirstViewBadge {
+    top: 300px;
+    left: auto;
+    right: 15px;
+    width: 110px;
+  }
+
+  .FirstViewTriangleLeft {
+    width: 130px;
+  }
+
+  .FirstViewTriangleRight {
+    width: 150px;
+  }
+
+  .FirstViewDecoration {
+    width: 300px;
+  }
+
 }
