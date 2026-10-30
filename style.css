@@ -437,3 +437,43 @@ body {
   }
 
 }
+
+/* ハンバーガーメニュー */
+
+/* PCでは非表示 */
+.HamburgerMenu {
+  display: none;
+}
+
+
+/* スマートフォン対応 */
+
+@media screen and (max-width: 767px) {
+
+  /* ハンバーガーメニューを表示 */
+  .HamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 36px;
+    height: 27px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+  /* 三本線 */
+  .HamburgerMenu span {
+    display: block;
+
+    width: 36px;
+    height: 3px;
+
+    background-color: #aaa;
+    border-radius: 2px;
+  }
+
